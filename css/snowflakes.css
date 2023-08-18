@@ -1,0 +1,73 @@
+.containerOfSnow {
+    position: absolute;
+    top: calc(100vh+3em);
+    left: 0;
+    z-index: 20;
+    transform: translateY(-5em); /* ikke margin-top pga safari */
+    height: 100%;
+    height: calc(100% - 4em);
+    /* height:100vh;
+    width: 100vw; */
+    overflow: hidden;
+    border:transparent 1px solid;
+}
+
+.containerOfSnow .row {
+    display: inline-flex; /* org */
+    margin-top: -32px; 
+    margin-left: -50px;
+
+}
+
+.containerOfSnow .row:nth-child(even){
+    margin-left: 1px;
+}
+
+.containerOfSnow .snowflake {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background-color: #111;
+    margin: 2px;
+    clip-path: url(#klip);
+    mask-composite: exclude; 
+    transition: 2s;
+    z-index: 100;
+}
+
+#cursor{
+    position: absolute;
+	top: 0;
+	left: 0;
+    width: 400px;
+	height: 400px;
+	border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 225, 255, 0.281);
+    animation: colorch 4s linear infinite;
+    z-index: 1;
+}
+
+#cursor::after{
+    content: 'her';
+    color: aliceblue;
+}
+
+@media screen and (max-width: 600px)  {
+    #cursor{
+      display: none;
+    }
+}
+@keyframes colorch {
+    0%{
+        filter: hue-rotate(0deg) blur(50px);
+    }
+    100%{
+        filter: hue-rotate(360deg) blur(50px);
+    }
+}
+
+@media screen and (max-width: 600px){
+    .containerOfSnow .snowflake{background-image: radial-gradient(rgba(255, 255, 255, 0.31),rgba(255, 255, 255, 0.13));
+    }
+}

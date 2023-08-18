@@ -1,0 +1,97 @@
+.outer-wrap div {
+    display: block;
+}
+
+.content-area {
+    display: flex;
+}
+
+.main-content-area {
+	padding: 2rem;
+}
+
+.galleryContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 30000;
+}
+
+/* .mainContainer .galleryContainer, */
+.galleryContainer  {
+    /* display: flex; */
+    /* margin-top: 2rem; */
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-color: chartreuse;
+
+}
+.mainContainer .galleryContainer .gallery {
+    position: relative;
+    z-index: 3000;
+}
+
+.mainContainer .galleryContainer  .gallery .gallery-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainContainer .galleryContainer .gallery .gallery-image img {
+	display: block;
+    max-height: 100px;
+}
+
+.largeImage {
+    display: none;
+    position: fixed;
+    top:2%;
+    left: 2%;
+    /* max-width: 80vw;
+    max-height: 80vh; */
+    max-width: 96%;
+    max-height: 95%;
+    background: rgba(0,0,0,.9);
+    border: 3px solid white;
+    z-index: 5000;
+}
+
+.largeImage img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.largeImage::before{
+    width: 20%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+
+/*
+.mainContainer .galleryContainer  .gallery .gallery-imgs .gallery-image {
+	height: 250px;
+	flex-grow: 1;
+	margin: 0 0 8px 8px;
+}
+
+.mainContainer .galleryContainer  .gallery .gallery-imgs .gallery-image:nth-child(4n+1) {
+    flex-basis: 250px;
+}
+.mainContainer .galleryContainer  .gallery .gallery-image:nth-child(4n+2) {
+    flex-basis: 325px;
+}
+.mainContainer .galleryContainer  .gallery .gallery-image:nth-child(4n+3) {
+    flex-basis: 180px;
+}
+.mainContainer .galleryContainer  .gallery .gallery-image:nth-child(4n+4) {
+    flex-basis: 380px;
+}
+
+.mainContainer .galleryContainer  .gallery .gallery-image img {
+   height: 100%;
+   object-fit: cover;
+}
+*/

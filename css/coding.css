@@ -1,0 +1,67 @@
+.code_main .head {
+    position: relative;
+    width: 100vw;
+    height: 33vh;
+    background-image: url('/img/data.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.code_main .head::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+}
+
+.code_main .head h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-1em);
+    /* transform: translate( 50% 50%); */
+    text-align: center;
+    font-size: 5em;
+    z-index: 2;
+}
+
+.code_main .head::after {
+    /* content:url('/img/data.png'); */
+
+    /* content: ""; */
+    /* ::before and ::after both require content*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+    opacity: .7;
+}
+
+:root {
+    color: aliceblue;
+}
+
+article {
+    background-color: blueviolet;
+    background-image: linear-gradient(120deg, hsl(60, 95%, 8%), #33d0ff);
+
+    padding: 1rem;
+    margin: 1rem;
+}
+
+h1 {
+    font-size: xx-large;
+    padding: 0;
+}

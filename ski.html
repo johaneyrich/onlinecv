@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkiTeori DDS</title>
+    <link rel="canoncical" href="https://eyrich.dk">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    header {
+        position: relative;
+        display: flexbox;
+        margin-bottom: 2rem;
+    }
+
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+        background-color: aqua;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header::after {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 10%;
+        width: 90%;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.3);
+        transform-origin: left;
+        transform: skewY(1deg);
+        z-index: -1;
+        filter: blur(5px);
+    }
+
+    .header {
+        font-size: xx-large;
+    }
+
+    .subheader {
+        font-size: medium;
+    }
+
+    .subsubheader {
+        font-size: small;
+    }
+
+    .menu-section {
+        top:0;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+    }
+   
+    .menu-section ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #dcdde1;
+    }
+    
+    .menu-section li  {
+        text-decoration: none;
+        color: #353b48;
+        padding: .6rem 1rem;
+        display: block;
+        transition: all .5s ease;
+    }
+    
+    .menu-section li:hover {
+        background-color: #f5f6fa;
+        cursor: pointer;
+    }
+    
+    .menu-heading {
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    
+    .menu-section .toggler {
+        display: none;
+    }
+
+    .single-line ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .single-line ul li {
+        flex-grow: 1;
+        flex-basis: auto;
+        flex-shrink: 0;   
+    }
+</style>
+
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="header">Fortolkning af Den Danske Skiskoles Skiteori</div>
+            <div class="subheader">Vores fortolkning af teorien i DDS's skimanual</div>
+            <div class="subsubheader">Manualen kan købes <a
+                    href="https://dendanskeskiskole.dk/shop/alpin-manual">her</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="menu-section">
+            <nav class="single-line menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li class="menuItem">Liste med alle qCards</li>
+                            <li class="menuItem">Random qCard</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    const gotolink = (link) =>{
+        window.location.href = link;
+    }
+
+    const menu = document.querySelectorAll('.menuItem')
+    for (m = 0; m < menu.length; m++) {
+        let link = 'husk.html';
+        if(m == 0) link = 'huskalle.html';
+        menu[m].addEventListener('click', function (e) {
+            gotolink(link);
+        })
+
+    }
+</script>
+
+</html>

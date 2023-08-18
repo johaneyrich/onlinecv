@@ -1,0 +1,1 @@
+const headLines = document.querySelector('headLines'); //der hvor alle unnderoverskrifter er i 

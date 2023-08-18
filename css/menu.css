@@ -1,0 +1,231 @@
+@media screen and (min-width: 600px) {
+    .single-line {
+        /* position: fixed; */
+    }
+}
+@media screen and (max-width: 600px) {
+    :root {
+        --primary-color: rgba(13, 110, 139, 0.75);
+        --overlay-color: rgba(24, 39, 51 , 0.85);
+        --menu-speed: 0.75s;
+      }
+    
+    .menu-section {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        /* z-index: 1202; */
+        /* min-width: 100%;
+        min-height: 100%; */
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-wrap .toggler,
+    .menu-section .toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3203;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    }
+
+    .menu-wrap .hamburger,
+    .menu-section .hamburger{
+        position: absolute;
+        top: .1%;
+        left: 2%;
+        z-index: 2002;  
+        min-width: 60px;
+        min-height: 60px;
+        background: transparent;
+        /* background: var(--primary-color); */
+        /* background: black; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hamburger Line */
+    .menu-section .hamburger > div{
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: rgba(255,255,255,0.7);
+        /* background: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        overflow: visible;
+    }
+
+    /* Hamburger Lines - Top & Bottom */
+    .menu-section .hamburger > div::before,
+    .menu-section .hamburger > div::after 
+     {
+        content: '';
+        position: absolute;
+        z-index: 1204;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+
+    /* Moves Line Down */
+    .menu-section .hamburger > div::after{
+        top: 10px;
+    }
+
+    /* Toggler Animation */
+    .menu-section .toggler:checked + .hamburger > div {
+        transform: rotate(135deg);
+    }
+
+    /* Turns Lines Into X */
+    .menu-section .toggler:checked + .hamburger > div:before,
+    .menu-section .toggler:checked + .hamburger > div:after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* Rotate On Hover When Checked */
+    .menu-section .toggler:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+    }
+
+    /* show the menu */
+    .menu-section .toggler:checked ~ .menu {
+        visibility: visible;
+        /* opacity: 1; */
+    }
+
+    .menu-section .toggler:checked ~ .menu > div {
+        transform: scale(1);
+        transition-duration: var(--menu-speed);
+    }
+
+    .menu-section .toggler:checked ~.menu > ul {
+        opacity: 1;
+        /* z-index: 1205; */
+        transform: opacity 0.4s ease 0.4s;
+    }
+
+    .menu-section .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-section .menu > div {
+        background: var(--overlay-color);
+        border-radius: 50%;
+        /* her skal det være et snefnug */
+        width: 200vw;
+        height: 200vw;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.4s ease;
+      }
+      
+    .menu-section .menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+    
+    /* .menu-section .menu > div > div > ul {
+        color: yellow;
+        overflow: visible;
+    } */
+    
+    .menu-section .menu > div > div > ul > li {
+        list-style: none;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+      
+    .menu-section .menu > div > div > ul > li > a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.4s ease;
+      }
+}
+
+@media screen and (min-width: 601px) {
+    /* SINGLE LINE MENU*/ 
+    /* .menu-section {
+        position: sticky;
+        top:0px;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+        z-index: 200;
+    } */
+    .menu-section {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top:0;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+        z-index: 201;
+    }
+   
+    .menu-section ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #dcdde1;
+    }
+    
+    .menu-section li a {
+        text-decoration: none;
+        color: #353b48;
+        padding: .6em 1em;
+        display: block;
+        transition: all .5s ease;
+    }
+    
+    .menu-section li a:hover {
+        background-color: #f5f6fa;
+    }
+    
+    .menu-heading {
+        font-size: 2em;
+        font-weight: normal;
+    }
+    
+    .menu-section .toggler {
+        display: none;
+    }
+
+    .single-line ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .single-line ul li {
+        flex-grow: 1;
+        flex-basis: auto;
+        flex-shrink: 0;   
+    }
+    
+} 

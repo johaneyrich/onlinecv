@@ -1,0 +1,170 @@
+@import url("https://use.typekit.net/qmi8eck.css");
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.top{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 10%;
+    padding: 0px;
+    width: 80%;
+    height:calc(100vw * .8 * 0.35 );
+    /* border: solid black thick; */
+}
+
+.top .header {
+    position: absolute;
+    width: 100%;
+    height:calc(100vw * .8 * 0.35 );
+}
+
+.top .header img{
+    width: 100%; 
+    height: auto;
+}
+
+.top .header .sun{
+    position: absolute;
+    left: 30%;
+    top: -10px;
+}
+
+.top .flex-wrap-title{
+    position: absolute;
+    bottom: -20px;
+    margin: 20px;
+    display: flex;
+    line-height: 100%;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.title {
+    color: whitesmoke;
+    z-index: 201;
+    font-size: 800%;
+    text-shadow: black 5px 5px 20px;
+    font-family: bickham-script-pro-3, sans-serif;
+    padding: 20px;
+}
+
+.subtitle {
+    color: whitesmoke;
+    z-index: 202;
+    font-size: 400%;
+    /* text-align: end; */
+    font-family: museo-sans, sans-serif;
+    font-weight: 500;
+    text-shadow: black 5px 5px 20px;
+    padding-left: 200px;
+    -webkit-text-stroke: black 2px;
+    color: transparent;
+}
+
+.main {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: rgba(128, 255, 0, 0.1);
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(160, 81, 45, 0.137);
+    border-radius: 50%;
+    position: relative;
+    content: "";
+    font-family: museo-sans, sans-serif;
+    font-weight: 500;
+    /* transform: translateY(0px); */
+}
+
+.main .card:nth-child(1){    
+    background-image: url("../img/someskiier.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 8;
+    overflow: hidden;
+    vertical-align: baseline;
+}
+
+.main .card:nth-child(1)::after{
+    content: "This is my first point of interest, please have a look";
+    background-color: turquoise;
+    transform: translateY(20px);
+    /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+.main .card:nth-child(2){
+    content: "This is my first point of intress, please have a look";
+    background-image: url("../img/someskiier.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 6;
+}
+
+.main .card:nth-child(3){
+    content: "This is my first point of intress, please have a look";
+    background-image: url("../img/someskiier.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 4;
+}
+
+.main .card:nth-child(4){
+    content: "This is my first point of intress, please have a look";
+    background-image: url("../img/someskiier.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+.card::before{
+    position: absolute;
+    font-size: 300px;
+    height: 200px;
+    width: 200px;
+    /* line-height: 100%; */
+    font-family: uppercut-angle, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    top: 0px;
+    left: -60%;
+    -webkit-text-stroke: black 2px;
+    color: transparent;
+    opacity: .2;
+    border-radius: 50%;
+    text-align: center;
+    justify-items:center;
+    align-self: center;
+}
+
+.card:nth-child(1):before{
+    content: "1";
+    z-index: 7;
+}
+
+.card:hover{
+    border-radius: 2px;
+}
+
+.card:nth-child(2):before{
+    content: "2";
+    z-index: 5;
+}
+
+.card:nth-child(3):before{
+    content: "3";
+    z-index: 3;
+}
+
+.card:nth-child(4):before{
+    content: "4";
+    z-index: 1;
+}
